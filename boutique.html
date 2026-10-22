@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mythoria — Boutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url('images/boutiqueback.png')] bg-cover bg-center bg-fixed text-white">
+    <div class="min-h-screen bg-black/70">
+
+        <header class="px-4 pt-3">
+            <img src="images/logomythoriya-removebg-preview.png" alt="Logo Mythoria" class="mx-auto h-28 w-full max-w-sm object-contain">
+
+            <nav class="mt-4 mb-6 flex justify-center">
+                <ul class="flex flex-wrap justify-center gap-6 rounded-full border border-purple-600 bg-purple-800 px-8 py-3 text-lg font-bold shadow-lg">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="boutique.html" class="text-yellow-400">Boutique</a></li>
+                    <li><a href="ouverture.html" class="hover:text-yellow-400">Ouverture</a></li>
+                    <li><a href="grimoire.html" class="hover:text-yellow-400">Mon grimoire</a></li>
+                    <li><a href="deck.html" class="hover:text-yellow-400">Mon deck</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="mx-auto flex max-w-6xl justify-end px-4 pt-3">
+            <button id="bouton-panier" type="button" aria-expanded="false" aria-controls="zone-panier" class="rounded-full bg-purple-800 px-5 py-3 font-bold text-white hover:bg-purple-700">
+                🛒 Mon panier (<span id="nombre-panier">0</span>)
+            </button>
+        </div>
+
+        <main class="mx-auto max-w-6xl px-4">
+
+            <section id="zone-panier" class="mt-4 rounded-lg bg-purple-700 p-5" hidden>
+                <div class="mb-4 flex items-center justify-between gap-3">
+                    <h2 class="text-2xl font-bold text-yellow-400">Mon panier</h2>
+                    <button id="fermer-panier" type="button" class="rounded bg-gray-800 px-3 py-2">Fermer</button>
+                </div>
+
+                <div id="liste-panier"></div>
+
+                <p class="mt-4 text-2xl font-bold">
+                    Total : <span id="total">0</span> DH
+                </p>
+
+                <div class="mt-4 flex flex-wrap gap-3">
+                    <button id="bouton-vider" type="button" class="rounded bg-red-700 p-3">Vider le panier</button>
+                    <button id="bouton-valider" type="button" class="rounded bg-yellow-400 p-3 font-bold text-black">Valider la commande</button>
+                </div>
+
+                <p class="mt-3 text-sm text-yellow-100">Achat simulé : aucun paiement réel.</p>
+                <a href="ouverture.html" class="mt-2 inline-block text-yellow-400 underline">Aller à la salle d’ouverture</a>
+            </section>
+
+            <p id="message" role="status" class="mt-3 text-center text-yellow-300"></p>
+
+            <section class="py-5 text-center">
+                <h1 class="text-3xl font-bold text-yellow-400 md:text-4xl">La boutique de Mythoria</h1>
+                <p class="mt-2 text-yellow-200">Choisissez votre booster et découvrez de nouvelles cartes.</p>
+                <p class="mt-1 text-sm text-yellow-100">Chaque pack contient 5 cartes aléatoires parmi les 15 de sa famille.</p>
+            </section>
+
+            <section class="pb-6">
+                <h2 class="mb-4 text-center text-2xl font-bold">Nos boosters</h2>
+
+                <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <article class="flex flex-col rounded-lg bg-gray-900 text-center">
+                        <img src="images/booster beginnerpack.png" alt="Pack du débutant" class="h-72 w-full object-contain">
+                        <div class="flex flex-1 flex-col p-4">
+                            <h3 class="text-xl font-bold text-amber-400">Pack du débutant</h3>
+                            <p class="mt-2 text-yellow-100">Idéal pour commencer, avec surtout des cartes communes.</p>
+                            <p class="mt-3 font-bold">5 cartes aléatoires</p>
+                            <p class="mt-1 text-sm text-gray-200">Héros, monstres, serviteurs et sorts.</p>
+                            <p class="mt-auto pt-3 text-2xl font-bold text-amber-400">20 DH</p>
+                            <button type="button" data-ajouter="0" class="mt-3 w-full rounded bg-yellow-400 p-3 font-bold text-black hover:bg-yellow-300">Ajouter au panier</button>
+                            <p data-compte="0" class="mt-2 min-h-6 text-sm font-bold text-green-400"></p>
+                        </div>
+                    </article>
+
+                    <article class="flex flex-col rounded-lg bg-gray-900 text-center">
+                        <img src="images/Invocation obscure _ booster .png" alt="Invocation obscure" class="h-72 w-full object-contain">
+                        <div class="flex flex-1 flex-col p-4">
+                            <h3 class="text-xl font-bold text-red-400">Invocation obscure</h3>
+                            <p class="mt-2 text-yellow-100">Découvrez des créatures des ténèbres et des sorts interdits.</p>
+                            <p class="mt-3 font-bold">5 cartes aléatoires</p>
+                            <p class="mt-1 text-sm text-gray-200">Monstres, serviteurs et sorts.</p>
+                            <p class="mt-auto pt-3 text-2xl font-bold text-red-400">35 DH</p>
+                            <button type="button" data-ajouter="1" class="mt-3 w-full rounded bg-yellow-400 p-3 font-bold text-black hover:bg-yellow-300">Ajouter au panier</button>
+                            <p data-compte="1" class="mt-2 min-h-6 text-sm font-bold text-green-400"></p>
+                        </div>
+                    </article>
+
+                    <article class="flex flex-col rounded-lg bg-gray-900 text-center">
+                        <img src="images/bosster inovationdeslegendes.png" alt="Invocation des légendes" class="h-72 w-full object-contain">
+                        <div class="flex flex-1 flex-col p-4">
+                            <h3 class="text-xl font-bold text-yellow-400">Invocation des légendes</h3>
+                            <p class="mt-2 text-yellow-100">Plus de chances d’obtenir des cartes rares, épiques ou légendaires.</p>
+                            <p class="mt-3 font-bold">5 cartes aléatoires</p>
+                            <p class="mt-1 text-sm text-gray-200">Héros, monstres, serviteurs et sorts.</p>
+                            <p class="mt-auto pt-3 text-2xl font-bold text-yellow-400">50 DH</p>
+                            <button type="button" data-ajouter="2" class="mt-3 w-full rounded bg-yellow-400 p-3 font-bold text-black hover:bg-yellow-300">Ajouter au panier</button>
+                            <p data-compte="2" class="mt-2 min-h-6 text-sm font-bold text-green-400"></p>
+                        </div>
+                    </article>
+
+                    <article class="flex flex-col rounded-lg bg-gray-900 text-center">
+                        <img src="images/pack de la chance.png" alt="Pack de la chance" class="h-72 w-full object-contain">
+                        <div class="flex flex-1 flex-col p-4">
+                            <h3 class="text-xl font-bold text-blue-300">Pack de la chance</h3>
+                            <p class="mt-2 text-yellow-100">Un pack mystère avec une chance de découvrir une carte exceptionnelle.</p>
+                            <p class="mt-3 font-bold">5 cartes aléatoires</p>
+                            <p class="mt-1 text-sm text-gray-200">Héros, monstres, serviteurs et sorts.</p>
+                            <p class="mt-auto pt-3 text-2xl font-bold text-blue-300">65 DH</p>
+                            <button type="button" data-ajouter="3" class="mt-3 w-full rounded bg-yellow-400 p-3 font-bold text-black hover:bg-yellow-300">Ajouter au panier</button>
+                            <p data-compte="3" class="mt-2 min-h-6 text-sm font-bold text-green-400"></p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="py-8 text-center">
+            <nav class="mb-4">
+                <ul class="flex flex-wrap justify-center gap-6 font-bold">
+                    <li><a href="index.html" class="hover:text-yellow-400">Accueil</a></li>
+                    <li><a href="boutique.html" class="text-yellow-400">Boutique</a></li>
+                    <li><a href="ouverture.html" class="hover:text-yellow-400">Ouverture</a></li>
+                    <li><a href="grimoire.html" class="hover:text-yellow-400">Mon grimoire</a></li>
+                    <li><a href="deck.html" class="hover:text-yellow-400">Mon deck</a></li>
+                </ul>
+            </nav>
+            <p class="text-gray-400">© 2026 Mythoria</p>
+        </footer>
+    </div>
+
+    <script>
+    var boosters = [
+      { nom: "Pack du débutant",        prix: 20 },
+      { nom: "Invocation obscure",      prix: 35 },
+      { nom: "Invocation des légendes", prix: 50 },
+      { nom: "Pack de la chance",       prix: 65 }
+    ];
+
+    var lePanier = [];
+    try {
+      lePanier = JSON.parse(localStorage.getItem("panier")) || [];
+    } catch (e) {
+      lePanier = [];
+    }
+
+    var boutonPanier = document.getElementById("bouton-panier");
+    var fermerPanier = document.getElementById("fermer-panier");
+    var zonePanier   = document.getElementById("zone-panier");
+    var listePanier  = document.getElementById("liste-panier");
+    var nombrePanier = document.getElementById("nombre-panier");
+    var totalPanier  = document.getElementById("total");
+    var messageZone  = document.getElementById("message");
+
+    function afficherMessage(texte) {
+      messageZone.textContent = texte;
+      setTimeout(function () { messageZone.textContent = ""; }, 3000);
+    }
+
+    function sauvegarder() {
+      localStorage.setItem("panier", JSON.stringify(lePanier));
+    }
+
+    function quantiteDe(id) {
+      for (var i = 0; i < lePanier.length; i++) {
+        if (lePanier[i].id === id) { return lePanier[i].quantite; }
+      }
+      return 0;
+    }
+
+    function ajouter(id) {
+      var trouve = false;
+      for (var i = 0; i < lePanier.length; i++) {
+        if (lePanier[i].id === id) {
+          lePanier[i].quantite = lePanier[i].quantite + 1;
+          trouve = true;
+        }
+      }
+      if (!trouve) {
+        lePanier.push({ id: id, nom: boosters[id].nom, prix: boosters[id].prix, quantite: 1 });
+      }
+      sauvegarder();
+      afficher();
+      afficherMessage(boosters[id].nom + " ajouté ! Vous en avez " + quantiteDe(id) + " dans le panier.");
+    }
+
+    function changerQuantite(position, changement) {
+      lePanier[position].quantite = lePanier[position].quantite + changement;
+      if (lePanier[position].quantite <= 0) {
+        lePanier.splice(position, 1);
+      }
+      sauvegarder();
+      afficher();
+    }
+
+    function retirer(position) {
+      lePanier.splice(position, 1);
+      sauvegarder();
+      afficher();
+    }
+
+    function vider() {
+      lePanier = [];
+      sauvegarder();
+      afficher();
+      afficherMessage("Le panier a été vidé.");
+    }
+
+    function valider() {
+      if (lePanier.length === 0) {
+        afficherMessage("Votre panier est vide !");
+        return;
+      }
+      var achetes = {};
+      try {
+        achetes = JSON.parse(localStorage.getItem("boostersAchetes")) || {};
+      } catch (e) {
+        achetes = {};
+      }
+      for (var i = 0; i < lePanier.length; i++) {
+        var id = lePanier[i].id;
+        if (achetes[id] === undefined) { achetes[id] = 0; }
+        achetes[id] = achetes[id] + lePanier[i].quantite;
+      }
+      localStorage.setItem("boostersAchetes", JSON.stringify(achetes));
+      lePanier = [];
+      sauvegarder();
+      afficher();
+      afficherMessage("Commande validée ! Vos boosters vous attendent dans la salle d'ouverture.");
+    }
+
+    function afficher() {
+      var total = 0;
+      var nombre = 0;
+      var html = "";
+
+      if (lePanier.length === 0) {
+        html = '<p class="text-gray-300">Votre panier est vide.</p>';
+      }
+
+      for (var i = 0; i < lePanier.length; i++) {
+        var ligne = lePanier[i];
+        var sousTotal = ligne.prix * ligne.quantite;
+        total = total + sousTotal;
+        nombre = nombre + ligne.quantite;
+
+        html += '<div class="mb-3 flex flex-wrap items-center justify-between gap-3 border-b border-gray-700 pb-3">'
+          + '<div><p class="font-bold">' + ligne.nom + '</p>'
+          + '<p class="text-sm text-gray-300">' + ligne.prix + ' DH l\'unité</p></div>'
+          + '<div class="flex items-center gap-2">'
+          + '<button type="button" data-moins="' + i + '" aria-label="Diminuer la quantité" class="rounded bg-gray-700 px-3 py-1 font-bold">−</button>'
+          + '<span>' + ligne.quantite + '</span>'
+          + '<button type="button" data-plus="' + i + '" aria-label="Augmenter la quantité" class="rounded bg-gray-700 px-3 py-1 font-bold">+</button>'
+          + '</div>'
+          + '<p class="font-bold text-yellow-400">' + sousTotal + ' DH</p>'
+          + '<button type="button" data-retirer="' + i + '" class="rounded bg-red-700 px-3 py-1">Retirer</button>'
+          + '</div>';
+      }
+
+      listePanier.innerHTML = html;
+      totalPanier.textContent = total;
+      nombrePanier.textContent = nombre;
+
+      var comptes = document.querySelectorAll("[data-compte]");
+      for (var c = 0; c < comptes.length; c++) {
+        var q = quantiteDe(Number(comptes[c].getAttribute("data-compte")));
+        if (q > 0) {
+          comptes[c].textContent = "Dans votre panier : " + q;
+        } else {
+          comptes[c].textContent = "";
+        }
+      }
+    }
+
+    boutonPanier.addEventListener("click", function () {
+      zonePanier.hidden = !zonePanier.hidden;
+      boutonPanier.setAttribute("aria-expanded", String(!zonePanier.hidden));
+    });
+    fermerPanier.addEventListener("click", function () {
+      zonePanier.hidden = true;
+      boutonPanier.setAttribute("aria-expanded", "false");
+    });
+
+    document.getElementById("bouton-vider").addEventListener("click", vider);
+    document.getElementById("bouton-valider").addEventListener("click", valider);
+
+    var boutonsAjouter = document.querySelectorAll("[data-ajouter]");
+    for (var b = 0; b < boutonsAjouter.length; b++) {
+      boutonsAjouter[b].addEventListener("click", function (event) {
+        ajouter(Number(event.currentTarget.getAttribute("data-ajouter")));
+      });
+    }
+
+    listePanier.addEventListener("click", function (event) {
+      var bouton = event.target.closest("button");
+      if (!bouton) { return; }
+      if (bouton.hasAttribute("data-plus"))    { changerQuantite(Number(bouton.getAttribute("data-plus")), 1); }
+      if (bouton.hasAttribute("data-moins"))   { changerQuantite(Number(bouton.getAttribute("data-moins")), -1); }
+      if (bouton.hasAttribute("data-retirer")) { retirer(Number(bouton.getAttribute("data-retirer"))); }
+    });
+
+    afficher();
+    </script>
+</body>
+</html>
