@@ -1,0 +1,51 @@
+ .vscode/settings.json                              |   3 [32m+[m
+ carte.js                                           |  57 [32m++++[m
+ deck.html                                          |  41 [32m+++[m
+ ... firmament-2Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3521408[m bytes
+ images/Ardan, protecteur des anciens-7debu.jpg     | Bin [31m0[m -> [32m3810841[m bytes
+ ...re des \303\251toiles-9le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3440600[m bytes
+ .../Azrakul, empereur des abysses-9nvocation.jpg   | Bin [31m0[m -> [32m3532146[m bytes
+ images/Carte Mythoria _ Archer des bois-2debu2.jpg | Bin [31m0[m -> [32m3771081[m bytes
+ ... du Soleil-4Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3402127[m bytes
+ ...ia _ Sorci\303\250re des ombres-6nvocation.jpg" | Bin [31m0[m -> [32m3445190[m bytes
+ ...er d\303\251chu, lame corrompue-5nvocation.jpg" | Bin [31m0[m -> [32m3360964[m bytes
+ ...lier d\342\200\231argent de Mythoria-6debu.jpg" | Bin [31m0[m -> [32m3783021[m bytes
+ ..., gardienne des gemmes-5le Pack de la Chanc.jpg | Bin [31m0[m -> [32m3548614[m bytes
+ ...1mon mineur, flamme des abysses-4nvocation.jpg" | Bin [31m0[m -> [32m3345030[m bytes
+ ...303\251clat naissant-1 le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3288294[m bytes
+ ...se du hasard cosmique-8le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3555297[m bytes
+ "images/Garde du village \303\240 la porte-deb"    | Bin [31m0[m -> [32m3545139[m bytes
+ ..., sentinelle cosmique-3le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3503275[m bytes
+ ...cr\303\251-3Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3584937[m bytes
+ ...nne de la for\303\252t sacr\303\251e-5debu.jpg" | Bin [31m0[m -> [32m3743602[m bytes
+ ...beau des t\303\251n\303\250bres-2nvocation.jpg" | Bin [31m0[m -> [32m3366295[m bytes
+ images/Loup des brumes, carte Mythoria-2deb        | Bin [31m0[m -> [32m3634817[m bytes
+ images/Loup des brumes, carte Mythoria-2debu.jpg   | Bin [31m0[m -> [32m3634817[m bytes
+ ...p des collines au cr\303\251puscule-3debu3.jpg" | Bin [31m0[m -> [32m3435519[m bytes
+ ...yra, enchanteresse lunaire au lac mystique-.jpg | Bin [31m0[m -> [32m3773140[m bytes
+ ...tin, tisseur de hasard-4le Pack de la Chanc.jpg | Bin [31m0[m -> [32m3535570[m bytes
+ ..., Reine des Mal\303\251dictions-8nvocation.jpg" | Bin [31m0[m -> [32m3386544[m bytes
+ images/Mythoria _ apprenti mage arcanique-4deb.jpg | Bin [31m0[m -> [32m3569398[m bytes
+ .../Mythoria _ portail des l\303\251gendes.png"    | Bin [31m2925895[m -> [32m0[m bytes
+ images/Ombre errante, spectre gothique-3.jpg       | Bin [31m0[m -> [32m3397405[m bytes
+ ..., le dragon du destin-10le Pack de la Chanc.jpg | Bin [31m0[m -> [32m3519444[m bytes
+ ...e Mythoria-6Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3423652[m bytes
+ ... des dieux-8Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3377053[m bytes
+ ...00\231aube-5Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3429236[m bytes
+ ...us les \303\251toiles-2le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3420429[m bytes
+ ...51gendaire-9Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3391510[m bytes
+ ...le solaire-1Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3605507[m bytes
+ ...tte maudit, guerrier des ruines-1Invocation.jpg | Bin [31m0[m -> [32m3492382[m bytes
+ ...esprit c\303\251leste-7le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3587399[m bytes
+ ...3\251leste-7Invocation des L\303\251gendes.jpg" | Bin [31m0[m -> [32m3426899[m bytes
+ ...reur des t\303\251n\303\250bres-7nvocation.jpg" | Bin [31m0[m -> [32m3385772[m bytes
+ images/deb2.jpg                                    | Bin [31m0[m -> [32m3562838[m bytes
+ images/debu.jpg                                    | Bin [31m0[m -> [32m3545139[m bytes
+ images/fond-ouvrir-boosters.jpg                    | Bin [31m0[m -> [32m333401[m bytes
+ images/grimoire-livre.png                          | Bin [31m0[m -> [32m2015212[m bytes
+ ...ur des \303\251toiles-6le Pack de la Chanc.jpg" | Bin [31m0[m -> [32m3452056[m bytes
+ ... royaumes \303\240 l\342\200\231aube-1debu.jpg" | Bin [31m0[m -> [32m3427772[m bytes
+ ouverture.html                                     |  86 [32m++++++[m
+ ouverture.js                                       | 293 [32m+++++++++++++++++++++[m
+ script.js                                          |   0
+ 50 files changed, 480 insertions(+)

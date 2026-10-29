@@ -193,7 +193,11 @@ function afficherCartes(booster) {
         let image = carte.image.trim().replace(/\\_/g, "_");
 
         let type = carte.type ? `<p class="text-gray-400 text-sm">${carte.type}</p>` : "";
-        let stats = (carte.atk !== undefined && carte.def !== undefined)
+        let stats = (carte.attaque !== undefined && carte.vie !== undefined)
+  ? `<p class="text-white text-sm font-bold mt-1">
+       ATK ${carte.attaque} · HP ${carte.vie}
+     </p>`
+  : "";
             ? `<p class="text-white text-sm font-bold mt-1">ATK ${carte.atk} · DEF ${carte.def}</p>`
             : "";
 
